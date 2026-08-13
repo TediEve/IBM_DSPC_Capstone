@@ -29,8 +29,8 @@ The goal of this project is to predict if the first stage will land, so we can d
 2. **Data Wrangling:** Filtered Falcon 9 records, imputed missing values (e.g., payload mass averages), and created the target binary classification column (1 = successful landing, 0 = failed landing).
 3. **Exploratory Data Analysis (EDA):** Evaluated flight numbers, payload mass, orbit types, and launch site success rates using SQL queries and statistical plots.
 4. **Interactive Visual Analytics:**
-*Folium:* Mapped launch sites, launch trajectories, proximity to coastlines, highways, airports, railroads and so on.
-*Plotly Dash:* Constructed an interactive dashboard featuring site selector dropdowns and payload range sliders to dynamically inspect success rates.
+   *Folium:* Mapped launch sites, launch trajectories, proximity to coastlines, highways, airports, railroads and so on.
+   *Plotly Dash:* Constructed an interactive dashboard featuring dropdown for site selections and a slider for choosing payload range to dynamically inspect success rates.
 5. **Predictive Analytics (Machine Learning):** Standardized input features using StandardScaler and tuned hyperparameters across 4 classification models using GridSearchCV with 10-fold cross-validation.
 ### 📈 Machine Learning Results Summary
 
@@ -44,22 +44,35 @@ The performance of four classification models was evaluated on the test set ($N=
 | **Decision Tree** | 0.8036 | 83.33% |
 **Conclusion:** While KNN, Logistic Regression, and SVM achieved identical test accuracies (83.33%) due to the small test sample size ($N=18$), KNN was selected as the winner due to achieving the highest cross-validation score during Grid Search and being the simplest one
 
-##💻 How to Run It
+---
 
-# 1. Clone this repo
-git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/[YOUR_REPO].git
-cd [YOUR_REPO]
+## 💻 How to Run It
 
-# 2. Set up virtual environment
+### 1. Clone this repo
+
+```bash
+git clone [https://github.com/](https://github.com/)TediEve/IBM_DSPC_Capstone.git
+cd IBM_DSPC_Capstone
+```
+### 2. Set up virtual environment
+```bash
 python -m venv venv
-source venv/bin/activate  
-# On Windows: venv\Scripts\activate
 
-# 3. Install the needed libraries(*Note:* The provided notebooks include package installation cells which can be skipped if running locally)
+# On Mac/Linux:
+source venv/bin/activate  
+
+# On Windows:
+venv\Scripts\activate
+```
+### 3. Install the needed libraries(*Note:* The provided notebooks include package installation cells which can be skipped if running locally)
+```bash
 pip install pandas numpy matplotlib seaborn scikit-learn dash plotly folium
-
-# 4. Run the dashboard
+```
+### 4. Run the dashboard
+```bash
 python dash_app/spacex_dash_app.py
+```
+---
 
 ## 📜 License & Acknowledgments
 
