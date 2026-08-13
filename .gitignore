@@ -1,0 +1,18 @@
+# Python environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# VS Code & IDE settings
+.vscode/
+.idea/
+
+# OS hidden files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
